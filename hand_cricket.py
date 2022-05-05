@@ -1,6 +1,6 @@
 import math
 import random
-import math
+
 
 toss_choice = (input('Choose Odd or Even :')).capitalize()
 
