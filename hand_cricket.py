@@ -12,7 +12,7 @@ while True:
     except ValueError:
         print("Not an integer! Please enter an integer.")
     except AssertionError:
-        print("Please enter an integer between 1 and 10")
+        print("Please enter an integer from 1 to 10")
     else:
         break
 
@@ -63,7 +63,7 @@ while True:
         except ValueError:
             print("Not an integer! Please enter an integer.")
         except AssertionError:
-            print("Please enter an integer between 1 and 10")
+            print("Please enter an integer from 1 to 10")
         else:
             break
     computer_num = random.randint(1,11)
@@ -84,6 +84,8 @@ while True:
             break
         elif  (State == 'Bowling' and innings == 2):
             print('You Won the match')
+            break
+        else:
             break
 
     else:
@@ -109,3 +111,5 @@ while True:
             else:
                 print('Computer won the match')
                 break
+        else:
+            break
