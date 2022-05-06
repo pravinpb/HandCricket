@@ -5,7 +5,16 @@ import random
 toss_choice = (input('Choose Odd or Even :')).capitalize()
 
 computer_input = random.randint(1,11)
-player_input = input('Enter a number for toss :')
+while True:
+    try:
+        player_input = int(input('Enter a number for toss :'))
+        assert 0 < player_input < 10
+    except ValueError:
+        print("Not an integer! Please enter an integer.")
+    except AssertionError:
+        print("Please enter an integer between 1 and 10")
+    else:
+        break
 
 print(f'Comp : {computer_input}')
 print(f'player : {player_input}')
@@ -47,7 +56,16 @@ target = 1
 innings = 1
 
 while True:
-    player_num = int(input(f'You are {State} and its innings {innings}. Enter the number :'))
+    while True:
+        try:
+            player_num = int(input(f'You are {State} and its innings {innings}. Enter the number :'))
+            assert 0 < player_num < 10
+        except ValueError:
+            print("Not an integer! Please enter an integer.")
+        except AssertionError:
+            print("Please enter an integer between 1 and 10")
+        else:
+            break
     computer_num = random.randint(1,11)
 
     if (player_num == computer_num):
