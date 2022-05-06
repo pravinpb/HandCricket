@@ -8,7 +8,7 @@ computer_input = random.randint(1,11)
 while True:
     try:
         player_input = int(input('Enter a number for toss :'))
-        assert 0 < player_input < 10
+        assert 0 <= player_input < 11
     except ValueError:
         print("Not an integer! Please enter an integer.")
     except AssertionError:
@@ -59,7 +59,7 @@ while True:
     while True:
         try:
             player_num = int(input(f'You are {State} and its innings {innings}. Enter the number :'))
-            assert 0 < player_num < 10
+            assert 0 <= player_num < 11
         except ValueError:
             print("Not an integer! Please enter an integer.")
         except AssertionError:
